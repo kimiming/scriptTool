@@ -1,0 +1,19 @@
+.table-menu {
+  display: flex;
+  /* justify-content: space-between; */
+  height: 170px;
+  width: 100%;
+  /* text-align: center; */
+  /* align-items: center; */
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f5f5f5;
+}
+.data-summery {
+  width: 180%;
+  flex: auto;
+}
+.menu-container {
+  width: 136px;
+  /* flex: 1; */
+}

@@ -1,0 +1,40 @@
+.tovcf-center {
+  min-width: 780px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.config-center-item {
+  min-width: 780px;
+  min-height: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.config-center-item-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e6f4ff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.config-center-item-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.config-center-item-input-btn {
+  margin-right: 10px;
+}

@@ -1,0 +1,75 @@
+[[client_apis]]
+index = 0
+active = true
+api_id = 26447290
+api_hash = "4c4f81973f92465685aea57fa54e0e48"
+
+[[client_apis]]
+index = 1
+active = true
+api_id = 20309216
+api_hash = "6786fa2ee9fdc8650311edccd084849a"
+
+[[client_apis]]
+index = 2
+active = true
+api_id = 23724970
+api_hash = "2248b1949265552c580bbc54a1180bd3"
+
+[[client_apis]]
+index = 3
+active = true
+api_id = 25958820
+api_hash = "62bd1f97ed414cbf172e89130a0d2da6"
+
+[[client_apis]]
+index = 4
+active = true
+api_id = 24769243
+api_hash = "7f6d4af08112d9c47c5158ab3d0c1a25"
+
+[[client_apis]]
+index = 5
+active = true
+api_id = 27965510
+api_hash = "e69c5a78a5e261abe56adaaf6c296f04"
+
+[[client_apis]]
+index = 6
+active = true
+api_id = 28157532
+api_hash = "01127170a2cb8782964e2c63c699d081"
+
+[[client_apis]]
+index = 7
+active = true
+api_id = 28184436
+api_hash = "8f81caf1ca549f5fa3ed2906870cc590"
+
+[[client_apis]]
+index = 8
+active = true
+api_id = 20109594
+api_hash = "3cf7dd2f6a13d67d8d9fadc44ada6fde"
+
+[[client_apis]]
+index = 9
+active = true
+api_id = 12616752
+api_hash = "8af917bfed81663d31a4ef784355b077"
+
+[[client_apis]]
+index = 10
+active = true
+api_id = 23783209
+api_hash = "d20985eebbdf8fa383a8faa95b77615d"
+
+[[client_apis]]
+index = 11
+active = true
+api_id = 24054649
+api_hash = "b0a71e3d120955177e1eec9b7f159699"
+
+
+[official_assets]
+sticker_name_list = [ "UtyaDuck", "HotCherry", "MrCroco", "LovelyPeachy", "CatCatCat", "Crocosaurus", "DonutTheDog", "Orangoutang", "TrickyFox", "BoysClub", "DolphinDolph", "FunkyGoose", "SweetyStrawberry", "BirdOfParadise", "MiaBunny", "CutieMadeline", "RedShibaInu", "SalchichaDog", "KangarooFighter", "SteampunkJulia", "PoolFlamingo", "UtyaD", "FroggoInLove", "LightningBug", "SnappyCrab", "MrCat", "WolfAlpha", "DinDino", "TwisterDog", "OwledDidi", "EggYolk", "LilPuppy", "TidyTieTom", "MrSeagull", "ValentineCat", "CloudiaSheep", "BananaAnimated", "Kozita", "coolguy", "SpottyGiraffe", "ColoredCats", "Flame", "HeavensLamby", "HighFox", "TendyTiger", "TibetanFox", "LongGoose", "LadyCat", "WorldArt", "CrazyFlower", "HeartyHearts", "Mistress", "NekoBell", "RedFox", "MonkeyPuppet", "MrGreene", "YellowBoy", "Banana", "BadCupid", "CuteNurse", "ColorfulMessages", "Borzoi", "ChappyBunny", "MagicMandrake", "Memes", "StinkyLove", "Turtle", "Gillman", "MrPanda", "NekoWaifu", "ChineseDragon", "Skull", "DeadlyPack", "Scream", "LilCifer", "Mamkin_Pumpkin", "CatSkull", "FangBat", "Tomby", "MyLittleDevil", "Funny_Pumpkins", "HalloUtya", "PumpkinCube", "TheRing", "MummyJackal", "PumpkinGhost", "SuperStar", "JollySanta", "Snowflake", "NewYearTiger", "RobinBird", "IceMan", "Hohoho", "ChristmasTiger", "RickyPenguin", "GrinchDog", "Penguinissimo", "SantaGirlHNY", "Hedgehoge", "JingleBellElf", "DisgruntledToad", "ChristmasDogs", "SnowballBoy", "ArcticFox", "AmelieHare", "YetiHolidays",]

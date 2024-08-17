@@ -1,0 +1,53 @@
+.data-summery-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.data-summery-title {
+  position: absolute;
+  text-align: center;
+  width: 57px;
+  height: 30px;
+  line-height: 30px;
+  /* margin-bottom: 20px; */
+  top: -10px;
+  left: -10px;
+  color: #1677ff;
+  background-color: #e6f4ff;
+  border-radius: 5px;
+}
+.data-summery {
+  display: flex;
+  margin: 10px;
+}
+.data-summery-item {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.data-summery-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+  height: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.data-summery-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.data-summery-btn-left {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.data-summery-btn-center {
+  margin-right: 20px;
+}
