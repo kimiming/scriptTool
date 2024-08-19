@@ -26,3 +26,11 @@ window.convertTxtToVcf = (txtPath, vcfPath) => {
     ipcRenderer.send("convert-txt-to-vcf", { txtPath, vcfPath });
   });
 };
+window.selectDirectory = () => {
+  return new Promise((resolve) => {
+    ipcRenderer.once("selected-directory", (event, filePath) => {
+      resolve(filePath);
+    });
+    ipcRenderer.send("select-directory");
+  });
+};

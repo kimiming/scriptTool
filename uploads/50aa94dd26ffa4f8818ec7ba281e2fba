@@ -1,0 +1,55 @@
+2. 上传后立即处理文件并删除
+你可以在文件上传后立即读取文件内容并插入到数据库，然后删除临时文件。这样可以避免文件长时间存储在服务器上。
+
+修改 main.js 中的 /upload 路由
+
+
+appExpress.post('/upload', upload.single('file'), (req, res) => {
+  const filePath = req.file.path;
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+      return;
+    }
+    const lines = data.split('\n');
+    const stmt = db.prepare("INSERT INTO contacts (phone, callback_url, status, verification_code, send_count, description) VALUES (?, ?, ?, ?, ?, ?)");
+    lines.forEach(line => {
+      const [phone, callback_url] = line.split('----');
+      stmt.run([phone, callback_url, 'pending', '', 0, '']);
+    });
+    stmt.finalize();
+
+    // 删除临时文件
+    fs.unlink(filePath, err => {
+      if (err) console.error('Error deleting file:', err);
+    });
+
+    res.json({ message: 'File uploaded and data imported successfully' });
+  });
+});
+
+
+3. 使用内存文件系统
+如果你不希望文件存储在磁盘上，可以使用内存文件系统（例如 memory-fs）来处理文件上传。这样可以避免磁盘 I/O 操作，提高性能。
+
+安装依赖
+
+npm install memory-fs
+const MemoryFS = require('memory-fs');
+const memoryFs = new MemoryFS();
+
+appExpress.post('/upload', upload.single('file'), (req, res) => {
+  const fileBuffer = req.file.buffer;
+  const data = fileBuffer.toString('utf8');
+  const lines = data.split('\n');
+  const stmt = db.prepare("INSERT INTO contacts (phone, callback_url, status, verification_code, send_count, description) VALUES (?, ?, ?, ?, ?, ?)");
+  lines.forEach(line => {
+    const [phone, callback_url] = line.split('----');
+    stmt.run([phone, callback_url, 'pending', '', 0, '']);
+  });
+  stmt.finalize();
+
+  res.json({ message: 'File uploaded and data imported successfully' });
+});
+
+

@@ -8,8 +8,9 @@ import { Tabs } from "antd";
 import "./App.css";
 
 function App() {
+  const [activeKey, setActiveKey] = useState();
   const onChange = (key) => {
-    console.log(key);
+    setActiveKey(key);
   };
   const items = [
     {
@@ -25,7 +26,7 @@ function App() {
     {
       key: "3",
       label: "配置中心",
-      children: <ConfigCenter />,
+      children: <ConfigCenter activeKey={activeKey} />,
     },
     {
       key: "4",

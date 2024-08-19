@@ -11,7 +11,7 @@
   padding: 20px;
 }
 
-.config-center-item {
+.tovcf-center-item {
   min-width: 780px;
   min-height: 100px;
   text-align: center;
@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.config-center-item-title {
+.tovcf-center-item-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,11 +30,11 @@
   padding: 5px;
   border-radius: 5px;
 }
-.config-center-item-input {
+.tovcf-center-item-input {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.config-center-item-input-btn {
+.tovcf-center-item-input-btn {
   margin-right: 10px;
 }

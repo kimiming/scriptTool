@@ -27,14 +27,14 @@ function Tovcf() {
 
   return (
     <div className="tovcf-center">
-      <div className="config-center-item">
-        <div className="config-center-item-title">vcf转化器</div>
-        <div className="config-center-item-content">
+      <div className="tovcf-center-item">
+        <div className="tovcf-center-item-title">vcf转化器</div>
+        <div className="tovcf-center-item-content">
           <Typography.Title level={5}>
             转化 TXT 文件为 VCF 文件
           </Typography.Title>
-          <div className="config-center-item-input">
-            <div className="config-center-item-input-btn">
+          <div className="tovcf-center-item-input">
+            <div className="tovcf-center-item-input-btn">
               <Button onClick={handleSelectTxtFile}>选择 TXT 文件</Button>
             </div>
 
@@ -43,8 +43,8 @@ function Tovcf() {
               onChange={(e) => setTxtPath(e.target.value)}
             />
           </div>
-          <div className="config-center-item-input">
-            <div className="config-center-item-input-btn">
+          <div className="tovcf-center-item-input">
+            <div className="tovcf-center-item-input-btn">
               <Button onClick={handleSelectSavePath}>选择 VCF 保存路径</Button>
             </div>
             <Input

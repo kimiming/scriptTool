@@ -26,11 +26,24 @@ db.serialize(() => {
   db.run(
     "CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY, phone TEXT, callback_url TEXT, status TEXT, verification_code TEXT, send_count INTEGER, description TEXT)"
   );
+  db.run(
+    "CREATE TABLE IF NOT EXISTS config (id INTEGER PRIMARY KEY, contactsFilePath TEXT, avatarFilePath TEXT, sessionFilePath TEXT, friendsFilePath TEXT)"
+  );
 });
 const appExpress = express();
 appExpress.use(cors());
 appExpress.use(bodyParser.json());
 appExpress.use(bodyParser.urlencoded({ extended: true }));
+
+appExpress.get("/api/directory", (req, res) => {
+  const directoryPath = req.query.path || "/";
+  fs.readdir(directoryPath, (err, files) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+    res.json(files);
+  });
+});
 
 appExpress.get("/contacts", (req, res) => {
   db.all("SELECT * FROM contacts", [], (err, rows) => {
@@ -62,6 +75,36 @@ appExpress.post("/contacts", (req, res) => {
       res.json({ id: this.lastID });
     }
   );
+});
+
+appExpress.post("/api/config", (req, res) => {
+  const config = req.body;
+  db.run(
+    "INSERT OR REPLACE INTO config (id, contactsFilePath, avatarFilePath, sessionFilePath, friendsFilePath) VALUES (1, ?, ?, ?, ?)",
+    [
+      config.contactsFilePath,
+      config.avatarFilePath,
+      config.sessionFilePath,
+      config.friendsFilePath,
+    ],
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(200).send();
+      }
+    }
+  );
+});
+//获取配置信息
+appExpress.get("/api/config", (req, res) => {
+  db.get("SELECT * FROM config WHERE id = 1", [], (err, row) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).json(row);
+    }
+  });
 });
 
 appExpress.put("/contacts/:id", (req, res) => {
@@ -337,5 +380,13 @@ ipcMain.on("select-save-path", async (event) => {
   });
   if (!result.canceled) {
     event.reply("selected-save-path", result.filePath);
+  }
+});
+ipcMain.on("select-directory", async (event) => {
+  const result = await dialog.showOpenDialog({
+    properties: ["openDirectory"],
+  });
+  if (!result.canceled) {
+    event.reply("selected-directory", result.filePaths[0]);
   }
 });

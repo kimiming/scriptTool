@@ -24,13 +24,13 @@ function SaveSession() {
     console.log(e.target.value);
   };
   return (
-    <div className="config-center">
-      <div className="config-center-item">
-        <div className="config-center-item-title">Session</div>
-        <div className="config-center-item-content">
+    <div className="session-center">
+      <div className="session-center-item">
+        <div className="session-center-item-title">Session</div>
+        <div className="session-center-item-content">
           <Typography.Title level={5}>手动保存session</Typography.Title>
           {isReturnCode ? (
-            <div className="config-center-item-input">
+            <div className="session-center-item-input">
               <span>验证密码:</span>
               <div style={{ width: "300px", marginRight: 20, marginLeft: 20 }}>
                 <Input
@@ -44,7 +44,7 @@ function SaveSession() {
               </Button>
             </div>
           ) : (
-            <div className="config-center-item-input">
+            <div className="session-center-item-input">
               <span>手机号码:</span>
               <div style={{ width: "300px", marginRight: 20, marginLeft: 20 }}>
                 <Input

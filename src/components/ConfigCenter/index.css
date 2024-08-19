@@ -15,11 +15,11 @@
   min-width: 780px;
   min-height: 100px;
   text-align: center;
-  margin-bottom: 20px;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .config-center-item-title {
@@ -32,6 +32,6 @@
 }
 .config-center-item-input {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }

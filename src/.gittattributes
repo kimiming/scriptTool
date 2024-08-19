@@ -1,0 +1,2 @@
+# 设置所有 JavaScript 文件使用 LF 换行符
+*.js text eol=lf

@@ -1,4 +1,4 @@
-.config-center {
+.session-center {
   min-width: 780px;
   height: 100%;
   display: flex;
@@ -11,7 +11,7 @@
   padding: 20px;
 }
 
-.config-center-item {
+.session-center-item {
   min-width: 780px;
   min-height: 100px;
   text-align: center;
@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.config-center-item-title {
+.session-center-item-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
   padding: 5px;
   border-radius: 5px;
 }
-.config-center-item-input {
+.session-center-item-input {
   display: flex;
   align-items: center;
   justify-content: center;
